@@ -1,0 +1,48 @@
+﻿<Window x:Class="Magazin.AdaugaProdus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Magazin"
+        mc:Ignorable="d"
+        Title="AdaugaProdus" Height="350" Width="300">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Width" Value="200" />
+        </Style>
+
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Width" Value="200" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="10,0,0,0" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Label Content="Denumire:" />
+            <TextBox x:Name="txtDenumire" />
+            <Label Content="Data Producției:" />
+            <DatePicker x:Name="dpDataProducției" />
+            <Label Content="Termen de Valabilitate:" />
+            <DatePicker x:Name="dpTermenValabilitate" />
+            <Label Content="Preț:" />
+            <TextBox x:Name="txtPret" />
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnSalveaza" Content="Salveaza" />
+                <Button x:Name="btnAnuleaza" Content="Anuleaza" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
