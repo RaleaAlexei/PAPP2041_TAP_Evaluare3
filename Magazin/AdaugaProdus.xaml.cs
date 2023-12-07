@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Magazin.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,30 @@ namespace Magazin
     /// </summary>
     public partial class AdaugaProdus : Window
     {
+
+        private readonly ProdusManager produsManager;
         public AdaugaProdus()
         {
             InitializeComponent();
+
+            produsManager = new ProdusManager();
+        }
+        private void BtnSalveaza_Click(object sender, RoutedEventArgs e)
+        {
+            Produs produs = new Produs
+            {
+                Denumire = txtDenumire.Text,
+                DataProducției = dpDataProducției.SelectedDate ?? DateTime.Now,
+                TermenValabilitate = dpTermenValabilitate.SelectedDate ?? DateTime.Now,
+                Pret = double.Parse(txtPret.Text)
+            };
+            produsManager.AdaugaProdus(produs);
+            Close();
+        }
+
+        private void BtnAnuleaza_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

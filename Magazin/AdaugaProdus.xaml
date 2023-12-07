@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Magazin"
         mc:Ignorable="d"
-        Title="AdaugaProdus" Height="350" Width="300">
+        Title="Adaugare produs" Height="350" Width="300">
     <Window.Resources>
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="10" />
@@ -40,8 +40,8 @@
             <Label Content="Preț:" />
             <TextBox x:Name="txtPret" />
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="btnSalveaza" Content="Salveaza" />
-                <Button x:Name="btnAnuleaza" Content="Anuleaza" />
+                <Button x:Name="btnSalveaza" Content="Salveaza" Click="BtnSalveaza_Click"/>
+                <Button x:Name="btnAnuleaza" Content="Anuleaza" Click="BtnAnuleaza_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

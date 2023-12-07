@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Magazin"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Manager Magazin" Height="400" Width="450">
     <Window.Resources>
         <Style TargetType="TextBox">
             <Setter Property="Margin" Value="10" />
@@ -29,8 +29,8 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TextBox  Text="{Binding FiltreazaDenumire, UpdateSourceTrigger=PropertyChanged}" />
-        <DataGrid ItemsSource="{Binding Produse}" AutoGenerateColumns="True" />
-        <Button Content="Adauga Produs" Command="{Binding AdaugaProdusCommand}" />
+        <TextBox x:Name="txtFiltreazaDenumire" Text="{Binding FiltreazaDenumire, UpdateSourceTrigger=PropertyChanged}" />
+        <DataGrid x:Name="dgProduse" ItemsSource="{Binding Produse}" AutoGenerateColumns="True" />
+        <Button x:Name="btnAdaugaProdus" Content="Adauga Produs" Command="{Binding AdaugaProdusCommand}" Click="AdaugaProdusCommand_Executed"/>
     </Grid>
 </Window>
